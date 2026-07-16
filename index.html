@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NITT Innovation Challenge — Solutions for Real Campus Problems | IIC, NIT Trichy</title>
+  <meta name="description" content="NITT Innovation Challenge invites all NIT Trichy students to propose solutions for real campus problems. Organised by the Institute Innovation Council. Apply before 25 July 2026.">
+  <meta property="og:title" content="NITT Innovation Challenge — IIC, NIT Trichy">
+  <meta property="og:description" content="Solutions for Real Campus Problems. Open to all NIT Trichy students. Apply before 25 July 2026.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <img src="https://intranet.kh.amrita.edu/iic/assets/logos/IIC-logo.png" alt="IIC Logo">
+          <div style="width: 1px; height: 28px; background: var(--text-muted);"></div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoQBPCXdJDNtRuM7zJC-CVc6X6Z1qrSAmIVGhM4KszChC4qX9bbHfVNXlt&s=10" alt="NIT Trichy Logo">
+        </div>
+        <div class="navbar__logo-text">
+          IIC NITT
+          <span>Innovation Council</span>
+        </div>
+      </a>
+      <div class="navbar__links" id="nav-links">
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#problem" class="navbar__link">The Problem</a>
+        <a href="#details" class="navbar__link">Details</a>
+        <a href="#timeline" class="navbar__link">Timeline</a>
+        <a href="#register" class="navbar__link">Register</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+        <a href="#register" class="navbar__cta">Apply Now ↓</a>
+      </div>
+      <div class="navbar__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <!-- Interactive Grid Ripple Background -->
+    <div class="hero__grid-bg" id="hero-grid-bg" aria-hidden="true"></div>
+
+    <div class="hero__inner container">
+      <!-- Left: Hero Content (above the grid) -->
+      <div class="hero__content reveal">
+        <div class="hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Open for Registration · Deadline 25 July 2026
+        </div>
+        <p class="hero__subtitle text-serif">Organised by the Institute Innovation Council, NIT Trichy</p>
+        <h1 class="hero__title">NITT Innovation Challenge</h1>
+        <p class="hero__desc">Identify, analyze, and propose actionable solutions to real problems faced on campus every day. Your ideas can reshape campus life.</p>
+        <a href="#register" class="hero__cta">
+          Register Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </a>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="hero__image reveal reveal-delay-1">
+        <img src="https://www.nitt.edu/home/NITT-2022.jpg" alt="NIT Trichy Campus">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE STRIP ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item">Solutions for Real Campus Problems</span>
+      <span class="marquee__item">Open to All NIT Trichy Students</span>
+      <span class="marquee__item">Deadline: 25 July 2026</span>
+      <span class="marquee__item">Theme: Alumni Connect</span>
+      <span class="marquee__item">Institute Innovation Council</span>
+      <span class="marquee__item">Solutions for Real Campus Problems</span>
+      <span class="marquee__item">Open to All NIT Trichy Students</span>
+      <span class="marquee__item">Deadline: 25 July 2026</span>
+      <span class="marquee__item">Theme: Alumni Connect</span>
+      <span class="marquee__item">Institute Innovation Council</span>
+      <span class="marquee__item">Solutions for Real Campus Problems</span>
+      <span class="marquee__item">Open to All NIT Trichy Students</span>
+      <span class="marquee__item">Deadline: 25 July 2026</span>
+      <span class="marquee__item">Theme: Alumni Connect</span>
+      <span class="marquee__item">Institute Innovation Council</span>
+      <span class="marquee__item">Solutions for Real Campus Problems</span>
+      <span class="marquee__item">Open to All NIT Trichy Students</span>
+      <span class="marquee__item">Deadline: 25 July 2026</span>
+      <span class="marquee__item">Theme: Alumni Connect</span>
+      <span class="marquee__item">Institute Innovation Council</span>
+    </div>
+  </div>
+
+  <!-- ===== IIC FORMATION ===== -->
+  <section class="section section--warm" id="formation">
+    <div class="container" style="text-align: center;">
+      <div class="reveal">
+        <div class="section-label">Our History</div>
+        <h2 class="section-title">The Institute Innovation Council</h2>
+        <p class="section-desc" style="max-width: 800px; margin: 0 auto;">Established in 2020, the IIC is the culmination of NITT's rich entrepreneurial legacy—from the E-Cell (2005) to CEDI (2012)—working seamlessly to foster innovation and realize the vision of Atmanirbhar Bharat.</p>
+      </div>
+      
+      <div class="formation__gallery reveal reveal-delay-1" style="margin-top: 3rem;">
+        <!-- Vanilla Infinite Moving Cards -->
+        <div class="scroller" id="iic-scroller" data-direction="left" data-speed="slow">
+          <ul class="scroller__inner">
+            <li><img src="https://rc.nitt.edu/IIC-2.JPG" alt="IIC Event 2"></li>
+            <li><img src="https://rc.nitt.edu/IIC-3.JPG" alt="IIC Event 3"></li>
+            <li><img src="https://rc.nitt.edu/IIC-4.JPG" alt="IIC Event 4"></li>
+            <li><img src="https://rc.nitt.edu/IIC-1.JPG" alt="IIC Event 1"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section section--warm" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="section__header reveal">
+          <div class="section-label">About the Programme</div>
+          <h2 class="section__title">Students identify real campus problems. IIC helps build real solutions.</h2>
+        </div>
+        <div class="about__content reveal reveal-delay-1">
+          <p>The <strong>NITT Innovation Challenge</strong> by <strong>IIC, NIT Trichy</strong> asks you to look at campus life, find what's broken, and propose how to fix it. This edition's focus: <strong>the alumni disconnect.</strong></p>
+        </div>
+      </div>
+      <div class="about__stats reveal reveal-delay-2">
+        <div class="stat">
+          <div class="stat__number">50,000+</div>
+          <div class="stat__label">NITT Alumni Worldwide</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">8,000+</div>
+          <div class="stat__label">Current Students</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">Zero</div>
+          <div class="stat__label">Structured Alumni Platform</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM SECTION ===== -->
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section-label">The Real Problem</div>
+        <h2 class="section__title">The Alumni Disconnect</h2>
+      </div>
+      <div class="problem__card reveal reveal-delay-1">
+        <div class="problem__highlights">
+          <div class="highlight">
+            <svg class="highlight__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="highlight__text">
+              <strong>No Mentorship Channel</strong>
+              No way to reach alumni in your target industry.
+            </div>
+          </div>
+          <div class="highlight">
+            <svg class="highlight__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <div class="highlight__text">
+              <strong>Career Guidance Gap</strong>
+              Placement prep happens without alumni insights.
+            </div>
+          </div>
+          <div class="highlight">
+            <svg class="highlight__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <div class="highlight__text">
+              <strong>Lost Institutional Memory</strong>
+              Elective tips, internship hacks — none of it transfers across batches.
+            </div>
+          </div>
+          <div class="highlight">
+            <svg class="highlight__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div class="highlight__text">
+              <strong>Global Network, Zero Access</strong>
+              Alumni at Google, ISRO, IIMs — but no way to connect.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DETAILS & ELIGIBILITY ===== -->
+  <section class="section section--warm" id="details">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section-label">Programme Details</div>
+        <h2 class="section__title">Everything you need to know</h2>
+      </div>
+      <div class="details__grid">
+        <div class="detail-card reveal">
+          <div class="detail-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>Programme</h4>
+          <p>NITT Innovation Challenge — identify real campus problems, propose real solutions.</p>
+          <div class="detail-card__tag">Innovation Challenge</div>
+        </div>
+        <div class="detail-card reveal reveal-delay-1">
+          <div class="detail-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h4>Theme</h4>
+          <p>This edition: <strong>Alumni Connect</strong> — bridging the gap between students and 50,000+ NITT alumni.</p>
+          <div class="detail-card__tag">Alumni Connect</div>
+        </div>
+        <div class="detail-card reveal reveal-delay-2">
+          <div class="detail-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Eligibility</h4>
+          <p>Open to <strong>all NIT Trichy students</strong> — B.Tech, M.Tech, PhD, MBA, MCA, M.Sc. Individuals or teams up to 4.</p>
+          <div class="detail-card__tag">All Students Welcome</div>
+        </div>
+        <div class="detail-card reveal reveal-delay-3">
+          <div class="detail-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h4>Deadline</h4>
+          <p>Apply by <strong>25 July 2026</strong>. Shortlist announced 1 August 2026.</p>
+          <div class="detail-card__tag">25 July 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section class="section" id="timeline">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section-label">Important Dates</div>
+        <h2 class="section__title">Timeline & Key Milestones</h2>
+      </div>
+
+      <!-- Countdown -->
+      <div class="reveal reveal-delay-1" style="text-align: center; margin-bottom: var(--sp-12);">
+        <p style="font-family: var(--font-ui); font-size: var(--fs-small); text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: var(--sp-2);">Registration Closes In</p>
+        <div class="countdown">
+          <div class="countdown__item">
+            <div class="countdown__number" id="countdown-days">--</div>
+            <div class="countdown__label">Days</div>
+          </div>
+          <div class="countdown__item">
+            <div class="countdown__number" id="countdown-hours">--</div>
+            <div class="countdown__label">Hours</div>
+          </div>
+          <div class="countdown__item">
+            <div class="countdown__number" id="countdown-mins">--</div>
+            <div class="countdown__label">Minutes</div>
+          </div>
+          <div class="countdown__item">
+            <div class="countdown__number" id="countdown-secs">--</div>
+            <div class="countdown__label">Seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container--narrow" style="margin: 0 auto;">
+        <div class="timeline">
+          <div class="timeline__item past reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">1 July 2026</div>
+            <div class="timeline__title">Programme Announced</div>
+            <div class="timeline__desc">Challenge announced across all departments.</div>
+          </div>
+          <div class="timeline__item past reveal reveal-delay-1">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">5 July 2026</div>
+            <div class="timeline__title">Registration Opens</div>
+            <div class="timeline__desc">Survey + registration form goes live.</div>
+          </div>
+          <div class="timeline__item active reveal reveal-delay-2">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">25 July 2026</div>
+            <div class="timeline__title">Last Date to Apply</div>
+            <div class="timeline__desc">Final deadline. No late entries.</div>
+          </div>
+          <div class="timeline__item reveal reveal-delay-3">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">1 August 2026</div>
+            <div class="timeline__title">Shortlist Announced</div>
+            <div class="timeline__desc">Selected participants notified via email.</div>
+          </div>
+          <div class="timeline__item reveal reveal-delay-4">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">10 August 2026</div>
+            <div class="timeline__title">Final Presentation</div>
+            <div class="timeline__desc">Present ideas to IIC panel. Winners announced.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGISTRATION / SURVEY FORM ===== -->
+  <section class="section section--warm" id="register">
+    <div class="container">
+      <div class="section__header reveal" style="text-align: center; margin-left: auto; margin-right: auto;">
+        <div class="section-label" style="justify-content: center;">Register & Survey</div>
+        <h2 class="section__title" style="margin-left: auto; margin-right: auto;">Tell us what you need from alumni.</h2>
+        <p class="section__desc" style="margin-left: auto; margin-right: auto;">Fields marked <span style="color: var(--error);">*</span> are required.</p>
+      </div>
+
+      <div class="form-section">
+        <div class="form-card reveal">
+          <form id="registration-form" novalidate>
+            <div class="form__grid">
+
+              <!-- === SECTION: Personal Information === -->
+              <div class="form__section-title">Personal Information</div>
+
+              <div class="form__group">
+                <label class="form__label" for="full_name">Full Name <span class="required">*</span></label>
+                <input type="text" class="form__input" id="full_name" name="full_name" placeholder="e.g. Rahul Sharma" required autocomplete="name">
+                <span class="form__error">This field is required</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="roll_number">Roll Number <span class="required">*</span></label>
+                <input type="text" class="form__input" id="roll_number" name="roll_number" placeholder="e.g. 106122001" required>
+                <span class="form__error">This field is required</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="email">Email Address <span class="required">*</span></label>
+                <input type="email" class="form__input" id="email" name="email" placeholder="e.g. rahul@nitt.edu" required autocomplete="email">
+                <span class="form__error">Please enter a valid email address</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" class="form__input" id="phone" name="phone" placeholder="e.g. 9876543210" required autocomplete="tel">
+                <span class="form__error">Please enter a valid phone number</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="department">Department <span class="required">*</span></label>
+                <select class="form__select" id="department" name="department" required>
+                  <option value="">Select your department</option>
+                  <option value="CSE">Computer Science & Engineering</option>
+                  <option value="ECE">Electronics & Communication Engineering</option>
+                  <option value="EEE">Electrical & Electronics Engineering</option>
+                  <option value="Mechanical">Mechanical Engineering</option>
+                  <option value="Civil">Civil Engineering</option>
+                  <option value="Chemical">Chemical Engineering</option>
+                  <option value="Metallurgy">Metallurgical & Materials Engineering</option>
+                  <option value="Production">Production Engineering</option>
+                  <option value="ICE">Instrumentation & Control Engineering</option>
+                  <option value="Architecture">Architecture</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Management">Management Studies (DoMS)</option>
+                  <option value="CA">Computer Applications (MCA)</option>
+                  <option value="Energy">Energy & Environment</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="form__error">Please select your department</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="year">Year of Study <span class="required">*</span></label>
+                <select class="form__select" id="year" name="year" required>
+                  <option value="">Select your year</option>
+                  <option value="1">1st Year</option>
+                  <option value="2">2nd Year</option>
+                  <option value="3">3rd Year</option>
+                  <option value="4">4th Year</option>
+                  <option value="5">5th Year (Dual Degree)</option>
+                  <option value="MTech">M.Tech</option>
+                  <option value="PhD">PhD</option>
+                  <option value="MBA">MBA</option>
+                  <option value="MCA">MCA</option>
+                  <option value="MSc">M.Sc</option>
+                </select>
+                <span class="form__error">Please select your year</span>
+              </div>
+
+              <!-- === SECTION: Alumni Connect Survey === -->
+              <hr class="form__divider">
+              <div class="form__section-title">Alumni Connect Survey</div>
+              <p class="form__section-desc">Share your honest perspective. Your responses will directly shape the IIC's alumni engagement strategy.</p>
+
+              <!-- Q1: Do you feel there is a lack of alumni connection? -->
+              <div class="form__group form__group--full">
+                <label class="form__label">Do you feel there is a lack of alumni connection on campus? <span class="required">*</span></label>
+                <div class="form__radio-group form__radio-group--horizontal">
+                  <label class="form__radio">
+                    <input type="radio" name="alumni_lack" value="Strongly Agree" required>
+                    Strongly Agree
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="alumni_lack" value="Agree">
+                    Agree
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="alumni_lack" value="Neutral">
+                    Neutral
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="alumni_lack" value="Disagree">
+                    Disagree
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="alumni_lack" value="Strongly Disagree">
+                    Strongly Disagree
+                  </label>
+                </div>
+                <span class="form__error">Please select an option</span>
+              </div>
+
+              <!-- Q2: In which field would you like alumni mentorship? -->
+              <div class="form__group form__group--full">
+                <label class="form__label">In which field(s) would you most benefit from alumni mentorship? (Select all that apply)</label>
+                <div class="form__checkbox-group form__checkbox-group--grid">
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Software/IT">
+                    Software / IT
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Core Engineering">
+                    Core Engineering
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Research/Academia">
+                    Research / Academia
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Entrepreneurship">
+                    Entrepreneurship
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Finance/Consulting">
+                    Finance / Consulting
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Government Services">
+                    Government Services (UPSC/IAS)
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Higher Studies Abroad">
+                    Higher Studies Abroad
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="mentorship_fields" value="Other">
+                    Other
+                  </label>
+                </div>
+              </div>
+
+              <!-- Q3: Would you attend an alumni seminar? -->
+              <div class="form__group form__group--full">
+                <label class="form__label">Would you be interested in attending an alumni seminar or webinar organized by IIC? <span class="required">*</span></label>
+                <div class="form__radio-group form__radio-group--horizontal">
+                  <label class="form__radio">
+                    <input type="radio" name="attend_seminar" value="Yes, definitely" required>
+                    Yes, definitely
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="attend_seminar" value="Maybe, depends on topic">
+                    Maybe, depends on topic
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="attend_seminar" value="Not interested">
+                    Not interested
+                  </label>
+                </div>
+                <span class="form__error">Please select an option</span>
+              </div>
+
+              <!-- Q4: Sunday morning attendance -->
+              <div class="form__group form__group--full">
+                <label class="form__label">If the seminar is scheduled on a <strong>Sunday morning (10:00 AM)</strong>, would you attend? <span class="required">*</span></label>
+                <div class="form__radio-group form__radio-group--horizontal">
+                  <label class="form__radio">
+                    <input type="radio" name="sunday_morning" value="Yes, I'll attend" required>
+                    Yes, I'll attend
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="sunday_morning" value="Probably">
+                    Probably
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="sunday_morning" value="Unlikely">
+                    Unlikely
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="sunday_morning" value="No">
+                    No
+                  </label>
+                </div>
+                <span class="form__error">Please select an option</span>
+              </div>
+
+              <!-- Q5: Preferred format -->
+              <div class="form__group form__group--full">
+                <label class="form__label">What format do you prefer for alumni interaction? (Select all that apply)</label>
+                <div class="form__checkbox-group form__checkbox-group--grid">
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="preferred_format" value="In-person seminar">
+                    In-person seminar
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="preferred_format" value="Online webinar">
+                    Online webinar
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="preferred_format" value="One-on-one mentoring">
+                    One-on-one mentoring
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="preferred_format" value="Panel discussion">
+                    Panel discussion
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="preferred_format" value="Informal meetup">
+                    Informal campus meetup
+                  </label>
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="preferred_format" value="WhatsApp/Discord group">
+                    WhatsApp / Discord group
+                  </label>
+                </div>
+              </div>
+
+              <!-- Q6: Open-ended questions -->
+              <div class="form__group form__group--full">
+                <label class="form__label" for="questions">Any specific questions or topics you'd like alumni to address?</label>
+                <textarea class="form__textarea" id="questions" name="questions" placeholder="e.g. How to prepare for MS applications, What's it like working at ISRO, Tips for cracking product management roles..."></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="form__submit-wrap">
+                <button type="submit" class="btn-primary" id="submit-btn">
+                  <span class="btn-text">Submit Registration</span>
+                  <span class="spinner"></span>
+                </button>
+                <p class="form__note">Your responses are confidential and will only be used by IIC, NIT Trichy for programme planning.</p>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand reveal">
+          <div class="footer__brand-logo">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <img src="https://intranet.kh.amrita.edu/iic/assets/logos/IIC-logo.png" alt="IIC Logo">
+              <div style="width: 1px; height: 32px; background: var(--text-muted);"></div>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoQBPCXdJDNtRuM7zJC-CVc6X6Z1qrSAmIVGhM4KszChC4qX9bbHfVNXlt&s=10" alt="NIT Trichy Logo">
+            </div>
+            <div class="footer__brand-name">Institute Innovation Council<br>NIT Tiruchirappalli</div>
+          </div>
+          <p>IIC, NIT Trichy — fostering innovation & entrepreneurship under the Ministry of Education, Govt. of India.</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="footer__heading">Quick Links</div>
+          <div class="footer__links">
+            <a href="#about" class="footer__link">About Programme</a>
+            <a href="#problem" class="footer__link">The Problem</a>
+            <a href="#details" class="footer__link">Details & Eligibility</a>
+            <a href="#timeline" class="footer__link">Timeline</a>
+            <a href="#register" class="footer__link">Register / Survey</a>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="footer__heading">Contact Us</div>
+          <div class="footer__links">
+            <span class="footer__link">Dr. K. Muthukumar<br>President, IIC</span>
+            <a href="mailto:iic@nitt.edu" class="footer__link">📧 iic@nitt.edu</a>
+            <a href="https://www.nitt.edu" target="_blank" rel="noopener" class="footer__link">🌐 www.nitt.edu</a>
+            <span class="footer__link">📍 NIT Trichy, Tiruchirappalli<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamil Nadu — 620015</span>
+            <a href="tel:+914312503000" class="footer__link">📞 +91 431 250 3000</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 Institute Innovation Council, NIT Tiruchirappalli. All rights reserved.</div>
+        <div class="footer__made">Crafted with purpose for the NITT community.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "iic-nitt-innovation-challenge",
+  "version": "1.0.0",
+  "description": "NITT Innovation Challenge — Alumni Connect Survey Website by IIC, NIT Trichy",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  }
+}

@@ -1,4 +1,4 @@
-# NITT Innovation Challenge — Alumni Connect 🚀
+# NITT Innovation Challenge — Alumni Connect 
 
 Welcome to the **IIC-demo-website**, the official registration portal for the NIT Trichy Innovation Challenge, organized by the Institute Innovation Council (IIC).
 

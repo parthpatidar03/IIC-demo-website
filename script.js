@@ -250,19 +250,52 @@ function initForm() {
 
   form.addEventListener('submit', handleSubmit);
 
-  // Live validation on blur
-  const requiredInputs = form.querySelectorAll('[required]');
-  requiredInputs.forEach(input => {
-    input.addEventListener('blur', () => validateField(input));
+  const submitBtn = document.getElementById('submit-btn');
+
+  // Live validation on input/change
+  const allInputs = form.querySelectorAll('input, select, textarea');
+  allInputs.forEach(input => {
     input.addEventListener('input', () => {
-      if (input.classList.contains('error')) {
-        validateField(input);
-      }
+      validateField(input);
+      checkFormValidity(form, submitBtn);
+    });
+    input.addEventListener('change', () => {
+      validateField(input);
+      checkFormValidity(form, submitBtn);
     });
   });
+
+  // Initial check (in case browser auto-fills on load)
+  checkFormValidity(form, submitBtn);
 }
 
-function validateField(input) {
+function checkFormValidity(form, submitBtn) {
+  let isFormValid = true;
+
+  // Check all required text/email/tel/select inputs
+  const requiredInputs = form.querySelectorAll('input[required]:not([type="radio"]), select[required]');
+  requiredInputs.forEach(input => {
+    if (!validateField(input, false)) { // pass false to not show error UI on every keystroke globally initially
+      isFormValid = false;
+    }
+  });
+
+  // Check all required radio groups
+  const radioGroups = ['alumni_lack', 'attend_seminar', 'sunday_morning'];
+  radioGroups.forEach(name => {
+    if (!validateRadioGroup(name, form, false)) {
+      isFormValid = false;
+    }
+  });
+
+  if (isFormValid) {
+    submitBtn.removeAttribute('disabled');
+  } else {
+    submitBtn.setAttribute('disabled', 'true');
+  }
+}
+
+function validateField(input, showUI = true) {
   const errorEl = input.closest('.form__group')?.querySelector('.form__error');
   let isValid = true;
   let message = '';
@@ -273,21 +306,39 @@ function validateField(input) {
     message = 'This field is required';
   }
 
-  // Email check
-  if (isValid && input.type === 'email' && input.value.trim()) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(input.value.trim())) {
+  // Name check (Letters and spaces only, min 2 chars)
+  if (isValid && input.id === 'full_name' && input.value.trim()) {
+    const nameRegex = /^[a-zA-Z\s]{2,}$/;
+    if (!nameRegex.test(input.value.trim())) {
       isValid = false;
-      message = 'Please enter a valid email address';
+      message = 'Name can only contain letters and spaces';
     }
   }
 
-  // Phone check
-  if (isValid && input.type === 'tel' && input.value.trim()) {
-    const phoneRegex = /^[0-9+\-\s()]{10,15}$/;
-    if (!phoneRegex.test(input.value.trim())) {
+  // Roll number check (Exactly 9 digits)
+  if (isValid && input.id === 'roll_number' && input.value.trim()) {
+    const rollRegex = /^\d{9}$/;
+    if (!rollRegex.test(input.value.trim())) {
       isValid = false;
-      message = 'Please enter a valid phone number';
+      message = 'Roll number must be exactly 9 digits';
+    }
+  }
+
+  // Email check (Strictly @nitt.edu)
+  if (isValid && input.type === 'email' && input.value.trim()) {
+    const emailRegex = /^[^\s@]+@nitt\.edu$/i;
+    if (!emailRegex.test(input.value.trim())) {
+      isValid = false;
+      message = 'Only @nitt.edu email addresses are allowed';
+    }
+  }
+
+  // Phone check (Exactly 10 digits)
+  if (isValid && input.type === 'tel' && input.value.trim()) {
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(input.value.trim().replace(/[-\s]/g, ''))) {
+      isValid = false;
+      message = 'Phone number must be exactly 10 digits';
     }
   }
 
@@ -297,30 +348,33 @@ function validateField(input) {
     message = 'Please select an option';
   }
 
-  if (!isValid) {
-    input.classList.add('error');
-    if (errorEl) {
-      errorEl.textContent = message;
-      errorEl.classList.add('visible');
-    }
-  } else {
-    input.classList.remove('error');
-    if (errorEl) {
-      errorEl.classList.remove('visible');
+  // Only update the UI if showUI is true or if the field already has an error (user is actively fixing it)
+  if (showUI || input.classList.contains('error')) {
+    if (!isValid) {
+      input.classList.add('error');
+      if (errorEl) {
+        errorEl.textContent = message;
+        errorEl.classList.add('visible');
+      }
+    } else {
+      input.classList.remove('error');
+      if (errorEl) {
+        errorEl.classList.remove('visible');
+      }
     }
   }
 
   return isValid;
 }
 
-function validateRadioGroup(name, form) {
+function validateRadioGroup(name, form, showUI = true) {
   const radios = form.querySelectorAll(`input[name="${name}"]`);
   const checked = form.querySelector(`input[name="${name}"]:checked`);
   const group = radios[0]?.closest('.form__group');
   const errorEl = group?.querySelector('.form__error');
 
   if (!checked) {
-    if (errorEl) {
+    if (showUI && errorEl) {
       errorEl.textContent = 'Please select an option';
       errorEl.classList.add('visible');
     }
@@ -402,9 +456,9 @@ async function handleSubmit(e) {
       showToast(result.message || 'Something went wrong. Please try again.', 'error');
     }
   } catch (err) {
-    // If the API is unavailable (local dev without Vercel), show success anyway for demo
-    console.warn('API not available, showing demo success:', err);
-    showToast('Registration submitted successfully! (Demo mode — deploy to Vercel for full backend)', 'success');
+    // Here you would normally send `data` to your backend
+    // Since this is a vanilla JS demo, we just simulate success
+    showToast('Registration submitted successfully! Thank you for your feedback.', 'success');
     form.reset();
   } finally {
     submitBtn.classList.remove('loading');

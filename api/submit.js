@@ -31,21 +31,39 @@ export default async function handler(req, res) {
       });
     }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
+    // Name validation (Letters and spaces only, min 2 chars)
+    const nameRegex = /^[a-zA-Z\s]{2,}$/;
+    if (!nameRegex.test(data.full_name.trim())) {
       return res.status(400).json({
         success: false,
-        message: 'Invalid email address'
+        message: 'Name can only contain letters and spaces'
       });
     }
 
-    // Phone validation
-    const phoneRegex = /^[0-9+\-\s()]{10,15}$/;
-    if (!phoneRegex.test(data.phone)) {
+    // Roll number validation (Exactly 9 digits)
+    const rollRegex = /^\d{9}$/;
+    if (!rollRegex.test(data.roll_number.trim())) {
       return res.status(400).json({
         success: false,
-        message: 'Invalid phone number'
+        message: 'Roll number must be exactly 9 digits'
+      });
+    }
+
+    // Email validation (Strictly @nitt.edu)
+    const emailRegex = /^[^\s@]+@nitt\.edu$/i;
+    if (!emailRegex.test(data.email.trim())) {
+      return res.status(400).json({
+        success: false,
+        message: 'Only @nitt.edu email addresses are allowed'
+      });
+    }
+
+    // Phone validation (Exactly 10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(data.phone.trim().replace(/[-\s]/g, ''))) {
+      return res.status(400).json({
+        success: false,
+        message: 'Phone number must be exactly 10 digits'
       });
     }
 
